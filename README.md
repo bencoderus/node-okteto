@@ -5,4 +5,6 @@ A sample NodeJS project built and deployed using Okteto and K8s.
 Okteto CLI installed and configured on your cmd.
 
 ### Run project.
-Okteto deploy.
+```bash
+okteto deploy
+```
