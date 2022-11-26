@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: node-okteto-ingress
+  annotations:
+    dev.okteto.com/generate-host: node-okteto
+spec:
+  rules:
+    - http:
+        paths:
+          - backend:
+              service:
+                name: node-okteto-svc
+                port:
+                  number: 3000
+            path: /
+            pathType: ImplementationSpecific

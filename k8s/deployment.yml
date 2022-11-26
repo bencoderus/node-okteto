@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-okteto
+spec:
+  selector:
+    matchLabels:
+      app: node-okteto
+  template:
+    metadata:
+      labels:
+        app: node-okteto
+    spec:
+      containers:
+      - name: node-okteto
+        image: bencoderus/node-okteto
+        imagePullPolicy: IfNotPresent
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 3000
