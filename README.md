@@ -6,5 +6,5 @@ Okteto CLI installed and configured on your cmd.
 
 ### Run project.
 ```bash
-okteto deploy
+okteto up
 ```
